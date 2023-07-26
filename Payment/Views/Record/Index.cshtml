@@ -1,0 +1,41 @@
+﻿@model List<Record>
+
+
+<h1>Payments</h1>
+
+<a asp-action="Create">Add new Payment</a>
+
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Concept
+            </th>
+            <th>
+                Amount
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var payment in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>payment.PaymentId)</td>
+                <td>@Html.DisplayFor(m=>payment.Concept)</td>
+                <td>@Html.DisplayFor(m=>payment.Amount)$</td>
+             </tr>
+
+
+
+        }
+    </tbody>
+
+
+
+</table>
